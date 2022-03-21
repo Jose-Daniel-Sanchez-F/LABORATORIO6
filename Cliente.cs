@@ -8,5 +8,10 @@ namespace LABORATORIO6
 {
     internal class Cliente
     {
+        public string nit { get; set; }
+
+        public string nombre { get; set; }
+
+        public string direccion { get; set; }
     }
 }

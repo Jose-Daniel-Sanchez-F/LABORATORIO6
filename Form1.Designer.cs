@@ -39,6 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.buttonIngreso = new System.Windows.Forms.Button();
+            this.buttonAlquiler = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxPlaca
@@ -136,11 +137,22 @@
             this.buttonIngreso.UseVisualStyleBackColor = true;
             this.buttonIngreso.Click += new System.EventHandler(this.buttonIngreso_Click);
             // 
+            // buttonAlquiler
+            // 
+            this.buttonAlquiler.Location = new System.Drawing.Point(192, 267);
+            this.buttonAlquiler.Name = "buttonAlquiler";
+            this.buttonAlquiler.Size = new System.Drawing.Size(137, 39);
+            this.buttonAlquiler.TabIndex = 11;
+            this.buttonAlquiler.Text = "Ir a Alquileres";
+            this.buttonAlquiler.UseVisualStyleBackColor = true;
+            this.buttonAlquiler.Click += new System.EventHandler(this.buttonAlquiler_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonAlquiler);
             this.Controls.Add(this.buttonIngreso);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -172,5 +184,6 @@
         private Label label4;
         private Label label5;
         private Button buttonIngreso;
+        private Button buttonAlquiler;
     }
 }

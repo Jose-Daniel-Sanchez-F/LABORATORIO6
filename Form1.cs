@@ -15,11 +15,11 @@ namespace LABORATORIO6
            
             foreach (var vehiculo in vehiculos)
             {
-                writer.Write(vehiculo.placa);
-                writer.Write(vehiculo.marca);
-                writer.Write(vehiculo.modelo);
-                writer.Write(vehiculo.color);
-                writer.Write(vehiculo.preciokilometro);
+                writer.WriteLine(vehiculo.placa);
+                writer.WriteLine(vehiculo.marca);
+                writer.WriteLine(vehiculo.modelo);
+                writer.WriteLine(vehiculo.color);
+                writer.WriteLine(vehiculo.preciokilometro);
             }
 
             writer.Close();
@@ -45,6 +45,12 @@ namespace LABORATORIO6
                 MessageBox.Show("Placa Repetida"); 
             }
 
+        }
+
+        private void buttonAlquiler_Click(object sender, EventArgs e)
+        {
+            FormAlquiler formAlquiler = new FormAlquiler();
+            formAlquiler.Show();
         }
     }
 }

@@ -13,6 +13,10 @@ namespace LABORATORIO6
     public partial class FormAlquiler : Form
     {
         List<Alquileres> alquileres = new List<Alquileres>();
+        List<Cliente> clientes = new List<Cliente>();
+        List<Vehiculo> vehiculos = new List<Vehiculo>();
+        List<Mostrar> mostrar = new List<Mostrar>();
+
         public FormAlquiler()
         {
             InitializeComponent();
@@ -43,6 +47,41 @@ namespace LABORATORIO6
 
             alquileres.Add(alquiler);
             GuardarAlquileres();
+        }
+
+        private void buttonMostrar_Click(object sender, EventArgs e)
+        {
+            for (int i =0; i < alquileres.Count; i++)
+            {
+                Mostrar mostrarTemp = new Mostrar();
+                for (int j = 0; j < clientes.Count; j++)
+                {
+                    if (alquileres[i].nit==clientes[j].nit)
+                    {
+                       mostrarTemp.nombre = clientes[j].nombre; 
+                    }
+
+                }
+                for (int k = 0; k < vehiculos.Count; k++)
+                {
+                    if (alquileres[i].placa == vehiculos[k].placa)
+                    {
+                        mostrarTemp.placa= vehiculos[k].placa;  
+                        mostrarTemp.color = vehiculos[k].color;
+                        mostrarTemp.total = vehiculos[k].preciokilometro * alquileres[i].kilometros;
+
+                    }
+
+                }
+                mostrar.Add(mostrarTemp);
+                
+                dataGridView1.DataSource = null;
+                dataGridView1.Refresh();
+                
+                dataGridView1.DataSource = mostrar;
+                dataGridView1.DataSource = null;
+
+            }
         }
     }
 }

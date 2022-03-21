@@ -39,6 +39,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.buttonIngresar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.buttonMostrar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxNit
@@ -136,11 +139,32 @@
             this.buttonIngresar.UseVisualStyleBackColor = true;
             this.buttonIngresar.Click += new System.EventHandler(this.buttonIngresar_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(421, 37);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(510, 242);
+            this.dataGridView1.TabIndex = 12;
+            // 
+            // buttonMostrar
+            // 
+            this.buttonMostrar.Location = new System.Drawing.Point(603, 321);
+            this.buttonMostrar.Name = "buttonMostrar";
+            this.buttonMostrar.Size = new System.Drawing.Size(115, 31);
+            this.buttonMostrar.TabIndex = 13;
+            this.buttonMostrar.Text = "Mostrar Datos";
+            this.buttonMostrar.UseVisualStyleBackColor = true;
+            this.buttonMostrar.Click += new System.EventHandler(this.buttonMostrar_Click);
+            // 
             // FormAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(994, 450);
+            this.Controls.Add(this.buttonMostrar);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonIngresar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -154,6 +178,7 @@
             this.Controls.Add(this.textBoxNit);
             this.Name = "FormAlquiler";
             this.Text = "FormAlquiler";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,5 +197,7 @@
         private Label label4;
         private Label label5;
         private Button buttonIngresar;
+        private DataGridView dataGridView1;
+        private Button buttonMostrar;
     }
 }
